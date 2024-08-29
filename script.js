@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#resetBtn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 let PlayAgain = document.querySelector("#new-game");
+let victorySound = document.querySelector("#victorySound");
 
 let turnO = true;
 
@@ -33,6 +34,7 @@ boxes.forEach((box) => {
 });
 
 function showWinner(winner) {
+  victorySound.play();
   msg.innerText = `🎉 Congratulations 🎉 
           🤩🤩🤩🤩🤩 
           Winner is ${winner}`;
